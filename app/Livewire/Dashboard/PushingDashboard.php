@@ -2,6 +2,8 @@
 
 namespace App\Livewire\Dashboard;
 
+use App\Models\Project;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
@@ -11,8 +13,11 @@ use Livewire\Attributes\Title;
 
 class PushingDashboard extends Component
 {
+
     public function render()
     {
-        return view('livewire.dashboard.pushing-dashboard');
+        return view('livewire.dashboard.pushing-dashboard')->with([
+            'projects' => Project::where('user_id',Auth::user()->id)->get(),
+        ]);
     }
 }
