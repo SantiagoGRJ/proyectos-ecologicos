@@ -20,7 +20,21 @@ new #[Layout('layouts.guest')] class extends Component
 
         Session::regenerate();
 
-        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+        $user=Auth::user();
+
+        if($user->hasRole('admin')){
+            $this->redirectIntended(default: route('dashboard.admin', absolute: false), navigate: true);
+        }
+        else if($user->hasRole('investor')){
+            $this->redirectIntended(default: route('dashboard.investor', absolute: false), navigate: true);
+        }
+        else if($user->hasRole('pushing')){
+            $this->redirectIntended(default: route('dashboard.pushing', absolute: false), navigate: true);
+        } else {
+            $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+        }
+
+
     }
 }; ?>
 
