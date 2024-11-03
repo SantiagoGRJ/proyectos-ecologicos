@@ -21,4 +21,14 @@ class Project extends Model
         'status', // Ej. para estado de aprobación: pendiente, aprobado, rechazado
         'user_id', // Para relacionarlo con el emprendedor que creó el proyecto
     ];
+
+    public static function search($query)
+    {
+    return Project::where('status', 'aprobado') // Asegúrate de filtrar por estado aprobado
+        ->where(function ($queryBuilder) use ($query) {
+            $queryBuilder->where('name', 'like', "%{$query}%")
+                ->orWhere('description', 'like', "%{$query}%"); // Asegúrate de que la columna 'number' exista
+        })
+        ->paginate(5); // Paginar resultados
+    }
 }
