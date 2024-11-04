@@ -1,0 +1,61 @@
+name: CI/CD Pipeline Para Proyecto de Laravel 
+
+on:
+  push:
+    branches:
+      - master
+      - santiago
+  pull_request:
+    branches:
+      - master
+      - santiago
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'  # Ajusta la versión de PHP según tu proyecto
+
+      - name: Install Dependencies
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+
+      - name: Build Assets (opcional)
+        run: npm install && npm run production
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build  # Asegúrate de que el trabajo de build se complete antes de ejecutar tests
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+
+      - name: Install Dependencies
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+
+      - name: Run Tests
+        run: php artisan test
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test  # Este trabajo solo se ejecutará si los tests pasan
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Deploy to Production
+        env:
+          SSH_KEY: ${{ secrets.SSH_KEY }}  # Asegúrate de tener la clave SSH configurada en los secretos de GitHub
+        run: |
+          echo "$SSH_KEY" | tr -d '\r' | ssh-add - > /dev/null
+          ssh -o StrictHostKeyChecking=no user@server "cd /ruta-del-proyecto && git pull origin master && composer install --no-dev && php artisan migrate --force && php artisan cache:clear"
