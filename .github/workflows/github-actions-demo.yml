@@ -43,6 +43,9 @@ jobs:
       - name: Install Dependencies
         run: composer install --no-interaction --prefer-dist --optimize-autoloader
 
+      - name: Build Assets
+        run: npm install && npm run build  # Asegúrate de generar el Vite manifest
+
       - name: Set Up Environment Variables
         run: |
           echo "APP_KEY=${{ secrets.APP_KEY }}" >> .env
@@ -76,4 +79,5 @@ jobs:
             php artisan cache:clear
             php artisan config:cache
           EOF
+
 
