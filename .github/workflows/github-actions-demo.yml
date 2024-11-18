@@ -1,4 +1,4 @@
-name: CI/CD Pipeline Para Proyecto de Laravel 
+name: CI/CD Pipeline Para Proyecto de Laravel
 
 on:
   push:
@@ -26,7 +26,7 @@ jobs:
         run: composer install --no-interaction --prefer-dist --optimize-autoloader
 
       - name: Build Assets (opcional)
-        run:  npm install && npm run build
+        run: npm install && npm run build
 
   test:
     runs-on: ubuntu-latest
@@ -43,6 +43,14 @@ jobs:
       - name: Install Dependencies
         run: composer install --no-interaction --prefer-dist --optimize-autoloader
 
+      - name: Build Assets
+        run: npm install && npm run build  # Asegúrate de generar el Vite manifest
+
+      - name: Set Up Environment Variables
+        run: |
+          echo "APP_KEY=${{ secrets.APP_KEY }}" >> .env
+          # Añadir otras variables de entorno aquí si es necesario
+
       - name: Run Tests
         run: php artisan test
 
@@ -53,9 +61,23 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
 
-      - name: Deploy to Production
+      - name: Set Up SSH Key
         env:
-          SSH_KEY: ${{ secrets.SSH_KEY }}  # Asegúrate de tener la clave SSH configurada en los secretos de GitHub
+          SSH_KEY: ${{ secrets.SSH_KEY }}
         run: |
           echo "$SSH_KEY" | tr -d '\r' | ssh-add - > /dev/null
-          ssh -o StrictHostKeyChecking=no user@server "cd /ruta-del-proyecto && git pull origin master && composer install --no-dev && php artisan migrate --force && php artisan cache:clear"
+
+      - name: Deploy to Production
+        env:
+          APP_KEY: ${{ secrets.APP_KEY }}  # Mantiene APP_KEY en el entorno de despliegue
+        run: |
+          ssh -o StrictHostKeyChecking=no user@server << 'EOF'
+            cd /ruta-del-proyecto
+            git pull origin master
+            composer install --no-dev --optimize-autoloader
+            php artisan migrate --force
+            php artisan cache:clear
+            php artisan config:cache
+          EOF
+
+
