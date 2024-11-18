@@ -9,5 +9,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/investor',InvestorDashboard::class)->name('dashboard.investor');
 
 Route::get('/projects',ProjectSearch::class)->name('projects.all');
+
 Route::get('/projects/{project}/detail',ProjectDetail::class)->name('project.detail');
 
+
+require __DIR__.'/auth.php';

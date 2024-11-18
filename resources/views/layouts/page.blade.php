@@ -16,12 +16,7 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-
-            @if (Auth::check())
             <livewire:layout.navigation />
-            @else
-            <livewire:layout.navigation-two />
-            @endif
 
             <!-- Page Heading -->
             @if (isset($header))

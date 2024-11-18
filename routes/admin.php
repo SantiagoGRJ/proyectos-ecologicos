@@ -14,4 +14,4 @@ Route::get('/amin/projects/approved',ProjectList::class)->name('projects.approve
 
 
 
-
+require __DIR__.'/auth.php';
