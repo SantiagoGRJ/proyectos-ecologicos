@@ -29,5 +29,8 @@ class AppServiceProvider extends ServiceProvider
 
         Route::middleware('web')
         ->group(base_path('routes/pushing.php'));
+
+        Route::middleware('web')
+        ->group(base_path('routes/all.php'));
     }
 }
