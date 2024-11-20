@@ -16,6 +16,7 @@
               </p>
               <form>
                 <div class="-mx-4 flex flex-wrap">
+                  <!-- Nombre -->
                   <div class="w-full px-4 md:w-1/2">
                     <div class="mb-8">
                       <label for="name" class="mb-3 block text-sm font-medium text-green-400 dark:text-white">
@@ -25,23 +26,25 @@
                         type="text"
                         id="name"
                         placeholder="Ingresa tu nombre"
-                        class="w-full rounded-md border py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51]"
+                        class="w-full rounded-md border border-green-400 bg-green-50 py-3 px-6 text-base font-medium text-green-600 placeholder-green-400 shadow-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500 dark:border-green-600 dark:bg-[#242B51] dark:text-green-300 dark:placeholder-green-500 dark:focus:border-green-400 dark:focus:ring-green-400"
                       />
                     </div>
                   </div>
+                  <!-- Correo -->
                   <div class="w-full px-4 md:w-1/2">
                     <div class="mb-8">
-                      <label for="email" class="mb-3 block text-sm  font-medium text-green-400 dark:text-white">
+                      <label for="email" class="mb-3 block text-sm font-medium text-green-400 dark:text-white">
                         Tu correo electrónico
                       </label>
                       <input
                         type="email"
                         id="email"
                         placeholder="Ingresa tu correo electrónico"
-                        class="w-full rounded-md border py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51]"
+                        class="w-full rounded-md border border-green-400 bg-green-50 py-3 px-6 text-base font-medium text-green-600 placeholder-green-400 shadow-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500 dark:border-green-600 dark:bg-[#242B51] dark:text-green-300 dark:placeholder-green-500 dark:focus:border-green-400 dark:focus:ring-green-400"
                       />
                     </div>
                   </div>
+                  <!-- Mensaje -->
                   <div class="w-full px-4">
                     <div class="mb-8">
                       <label for="message" class="mb-3 block text-sm font-medium text-green-400 dark:text-white">
@@ -51,20 +54,22 @@
                         id="message"
                         rows="5"
                         placeholder="Ingresa tu mensaje"
-                        class="w-full resize-none rounded-md border py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51]"
+                        class="w-full resize-none rounded-md border border-green-400 bg-green-50 py-3 px-6 text-base font-medium text-green-600 placeholder-green-400 shadow-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500 dark:border-green-600 dark:bg-[#242B51] dark:text-green-300 dark:placeholder-green-500 dark:focus:border-green-400 dark:focus:ring-green-400"
                       ></textarea>
                     </div>
                   </div>
+                  <!-- Botón -->
                   <div class="w-full px-4">
                     <button
                       type="submit"
-                      class="rounded-md bg-green-600 bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80"
+                      class="w-full rounded-md bg-green-600 py-4 px-9 text-base font-medium text-white shadow-lg transition duration-300 ease-in-out hover:bg-green-500 hover:shadow-xl dark:bg-green-700 dark:hover:bg-green-600"
                     >
                       Enviar ticket
                     </button>
                   </div>
                 </div>
               </form>
+
             </div>
           </div>
 

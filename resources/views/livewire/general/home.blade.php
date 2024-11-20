@@ -8,7 +8,7 @@
     class="bg-cover bg-center h-96 flex justify-center flex-col items-center text-center text-white relative"
     style="background-image: url({{ Storage::url('assets/'.'Proyectose.jpg') }});">
     <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Capa de opacidad -->
-    <h1 class="text-4xl  font-bold relative">Bienvenidos a EcoCrowd</h1>
+    <h1 class="text-4xl  font-bold relative">Bienvenidos a Eco</h1>
     <p class="mt-4 text-xl relative">Apoya proyectos ecológicos y haz crecer el futuro sostenible</p>
 </section>
 
