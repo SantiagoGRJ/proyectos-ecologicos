@@ -7,7 +7,7 @@
               <img src="{{ asset('images/logo/logo-2.svg') }}" alt="logo" class="w-full dark:hidden" width="140" height="30" />
               <img src="{{ asset('images/logo/logo.svg') }}" alt="logo" class="hidden w-full dark:block" width="140" height="30" />
             </a>
-            <p class="mb-9 text-base font-medium leading-relaxed text-body-color">
+            <p class="mb-9 text-base font-medium leading-relaxed text-green-600">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis.
             </p>
             <div class="flex items-center">
@@ -32,22 +32,22 @@
 
         <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
           <div class="mb-12 lg:mb-16">
-            <h2 class="mb-10 text-xl font-bold text-black dark:text-white">Useful Links</h2>
+            <h2 class="mb-10 text-xl font-bold text-green-600 dark:text-white">Useful Links</h2>
             <ul>
               <li>
-                <a href="/" class="mb-4 inline-block text-base font-medium text-body-color hover:text-primary">Blog</a>
+                <a href="/" class="mb-4 inline-block text-base font-medium text-green-600 hover:text-primary">Blog</a>
               </li>
               <li>
-                <a href="/" class="mb-4 inline-block text-base font-medium text-body-color hover:text-primary">Pricing</a>
+                <a href="/" class="mb-4 inline-block text-base font-medium text-green-600 hover:text-primary">Pricing</a>
               </li>
               <li>
-                <a href="/" class="mb-4 inline-block text-base font-medium text-body-color hover:text-primary">Security</a>
+                <a href="/" class="mb-4 inline-block text-base font-medium text-green-600 hover:text-primary">Security</a>
               </li>
               <li>
-                <a href="/" class="mb-4 inline-block text-base font-medium text-body-color hover:text-primary">Terms & Conditions</a>
+                <a href="/" class="mb-4 inline-block text-base font-medium text-green-600 hover:text-primary">Terms & Conditions</a>
               </li>
               <li>
-                <a href="/" class="mb-4 inline-block text-base font-medium text-body-color hover:text-primary">Privacy Policy</a>
+                <a href="/" class="mb-4 inline-block text-base font-medium text-green-600 hover:text-primary">Privacy Policy</a>
               </li>
             </ul>
           </div>
@@ -55,16 +55,16 @@
 
         <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
           <div class="mb-12 lg:mb-16">
-            <h2 class="mb-10 text-xl font-bold text-black dark:text-white">Company</h2>
+            <h2 class="mb-10 text-xl font-bold text-green-600 dark:text-white">Company</h2>
             <ul>
               <li>
-                <a href="/" class="mb-4 inline-block text-base font-medium text-body-color hover:text-primary">About Us</a>
+                <a href="/" class="mb-4 inline-block text-base font-medium text-green-600 hover:text-primary">About Us</a>
               </li>
               <li>
-                <a href="/" class="mb-4 inline-block text-base font-medium text-body-color hover:text-primary">Careers</a>
+                <a href="/" class="mb-4 inline-block text-base font-medium text-green-600 hover:text-primary">Careers</a>
               </li>
               <li>
-                <a href="/" class="mb-4 inline-block text-base font-medium text-body-color hover:text-primary">Contact</a>
+                <a href="/" class="mb-4 inline-block text-base font-medium text-green-600 hover:text-primary">Contact</a>
               </li>
             </ul>
           </div>
@@ -72,16 +72,16 @@
 
         <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
           <div class="mb-12 lg:mb-16">
-            <h2 class="mb-10 text-xl font-bold text-black dark:text-white">Resources</h2>
+            <h2 class="mb-10 text-xl font-bold text-green-600 dark:text-white">Resources</h2>
             <ul>
               <li>
-                <a href="/" class="mb-4 inline-block text-base font-medium text-body-color hover:text-primary">Help Center</a>
+                <a href="/" class="mb-4 inline-block text-base font-medium text-green-600 hover:text-primary">Help Center</a>
               </li>
               <li>
-                <a href="/" class="mb-4 inline-block text-base font-medium text-body-color hover:text-primary">Documentation</a>
+                <a href="/" class="mb-4 inline-block text-base font-medium text-green-600 hover:text-primary">Documentation</a>
               </li>
               <li>
-                <a href="/" class="mb-4 inline-block text-base font-medium text-body-color hover:text-primary">API</a>
+                <a href="/" class="mb-4 inline-block text-base font-medium text-green-600 hover:text-primary">API</a>
               </li>
             </ul>
           </div>

@@ -1,14 +1,13 @@
-
 <section id="about" class="py-16 md:py-20 lg:py-28">
     <div class="container">
         <!-- About Section One -->
         <div class="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
             <div class="flex flex-wrap items-center">
                 <div class="w-full px-4 lg:w-1/2">
-                    <h2 class="text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl mb-4">
+                    <h2 class="text-xl font-bold text-green-600 dark:text-white sm:text-2xl lg:text-xl xl:text-2xl mb-4">
                         Crafted for Startup, SaaS and Business Sites.
                     </h2>
-                    <p class="text-base font-medium text-body-color sm:text-lg sm:leading-relaxed mb-9">
+                    <p class="text-base font-medium text-body-color dark:text-gray-300 sm:text-lg sm:leading-relaxed mb-9">
                         The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable
                         business applications with interactive panel discussions and roundtables.
                     </p>
@@ -16,7 +15,7 @@
                     <div class="mb-12 max-w-[570px] lg:mb-0">
                         <div class="flex flex-wrap -mx-3">
                             <div class="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                                <p class="mb-5 flex items-center text-lg font-medium text-body-color">
+                                <p class="mb-5 flex items-center text-lg font-medium text-body-color dark:text-gray-300">
                                     <span class="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
                                         <!-- Check Icon -->
                                         <svg width="16" height="13" viewBox="0 0 16 13" class="fill-current">
@@ -26,7 +25,7 @@
                                     </span>
                                     Premium quality
                                 </p>
-                                <p class="mb-5 flex items-center text-lg font-medium text-body-color">
+                                <p class="mb-5 flex items-center text-lg font-medium text-body-color dark:text-gray-300">
                                     <span class="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
                                         <!-- Check Icon -->
                                         <svg width="16" height="13" viewBox="0 0 16 13" class="fill-current">
@@ -39,7 +38,7 @@
                             </div>
 
                             <div class="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                                <p class="mb-5 flex items-center text-lg font-medium text-body-color">
+                                <p class="mb-5 flex items-center text-lg font-medium text-body-color dark:text-gray-300">
                                     <span class="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
                                         <!-- Check Icon -->
                                         <svg width="16" height="13" viewBox="0 0 16 13" class="fill-current">
@@ -49,7 +48,7 @@
                                     </span>
                                     Use for lifetime
                                 </p>
-                                <p class="mb-5 flex items-center text-lg font-medium text-body-color">
+                                <p class="mb-5 flex items-center text-lg font-medium text-body-color dark:text-gray-300">
                                     <span class="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
                                         <!-- Check Icon -->
                                         <svg width="16" height="13" viewBox="0 0 16 13" class="fill-current">
@@ -80,23 +79,17 @@
                 </div>
             </div>
             <div class="w-full px-4 lg:w-1/2">
-                <div class="max-w-[470px]">
-                    <div class="mb-9">
-                        <h3 class="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                            The biggest platform for creative services
-                        </h3>
-                        <p class="mb-5 text-base font-medium text-body-color sm:text-lg sm:leading-relaxed">
-                            We are building a network of businesses, agencies, and individuals to collaborate, share
-                            knowledge, and improve the creative process. We bring together technology, design, and
-                            content for your success.
-                        </p>
-                    </div>
-
-                    <a href="#services"
-                        class="text-lg font-medium text-body-color hover:text-primary dark:text-white dark:hover:text-primary">
-                        Learn More
-                    </a>
-                </div>
+                <h2 class="text-xl font-bold text-green-600 dark:text-white sm:text-2xl lg:text-xl xl:text-2xl mb-4">
+                    Build With Purpose, Quality, and Love.
+                </h2>
+                <p class="text-base font-medium text-body-color dark:text-green-600 sm:text-lg sm:leading-relaxed mb-9">
+                    This allows the business to reach new customers and improves revenue growth by educating new
+                    individuals on using their services for growing purposes.
+                </p>
+                <p class="text-base font-medium text-body-color dark:text-gray-300 sm:text-lg sm:leading-relaxed mb-9">
+                    Learning about the latest trends is the best way to grow your business. We’re here to help you
+                    get up to speed!
+                </p>
             </div>
         </div>
     </div>
