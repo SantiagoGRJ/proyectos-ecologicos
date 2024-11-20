@@ -18,6 +18,13 @@ class ProjectFactory extends Factory
     {
         return [
             //
+            'name' => fake()->word(),
+            'description' => fake()->sentence(10),
+            'funding_goal' => fake()->randomFloat(2),
+            'duration' => fake()->numberBetween(120,200),
+            'category' => fake()->randomElement(["energia renovable","Reciclaje","agricultura sostenible"]),
+            'user_id' => fake()->unique()->numberBetween(1,10),
+            'status' => fake()->randomElement(['pendiente','aprobado','rechazado']),
         ];
     }
 }

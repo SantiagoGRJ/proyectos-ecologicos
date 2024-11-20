@@ -33,7 +33,7 @@
             <label for="category" class="block text-sm font-medium text-gray-700">Categoría</label>
             <select id="category" wire:model="category" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
                 <option value="">Seleccione una categoría</option>
-                <option value="energía renovable">Energía Renovable</option>
+                <option value="energia renovable">Energía Renovable</option>
                 <option value="reciclaje">Reciclaje</option>
                 <option value="agricultura sostenible">Agricultura Sostenible</option>
             </select>
