@@ -1,18 +1,54 @@
-<div class="max-w-2xl mx-auto p-6 bg-white shadow-md rounded-lg">
-    <h2 class="text-3xl font-bold mb-4">{{ $project->name }}</h2>
+<div class="max-w-4xl mx-auto p-6 bg-gray-800 shadow-lg rounded-lg">
+    <!-- Título del Proyecto -->
+    <h2 class="text-4xl font-extrabold text-white mb-4">{{ $project->name }}</h2>
 
-    <p class="text-gray-700 mb-2"><strong>Descripción:</strong> {{ $project->description }}</p>
+    <!-- Imagen del Proyecto (si se tiene) -->
+    <div class="mb-6">
+        <img src="{{ $project->image_url }}" alt="Proyecto Imagen" class="w-full h-72 object-cover rounded-lg shadow-md">
+    </div>
 
-    <p class="text-gray-700 mb-2"><strong>Objetivo de Financiamiento:</strong> ${{ number_format($project->funding_goal, 2) }}</p>
+    <!-- Descripción del Proyecto -->
+    <p class="text-lg text-gray-300 mb-4">
+        <span class="font-semibold text-white">Descripción: </span>
+        {{ $project->description }}
+    </p>
 
-    <p class="text-gray-700 mb-2"><strong>Duración Estimada:</strong> {{ $project->duration }} días</p>
+    <!-- Detalles del Proyecto -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+        <!-- Objetivo de Financiamiento -->
+        <div class="bg-gray-700 p-4 rounded-lg shadow-sm">
+            <p class="font-semibold text-gray-300">Objetivo de Financiamiento</p>
+            <p class="text-xl text-yellow-400">${{ number_format($project->funding_goal, 2) }}</p>
+        </div>
 
-    <p class="text-gray-700 mb-2"><strong>Categoría:</strong> {{ $project->category }}</p>
+        <!-- Duración Estimada -->
+        <div class="bg-gray-700 p-4 rounded-lg shadow-sm">
+            <p class="font-semibold text-gray-300">Duración Estimada</p>
+            <p class="text-xl text-white">{{ $project->duration }} días</p>
+        </div>
 
-    <p class="text-gray-700 mb-2"><strong>Estado:</strong> {{ $project->status }}</p>
+        <!-- Categoría del Proyecto -->
+        <div class="bg-gray-700 p-4 rounded-lg shadow-sm">
+            <p class="font-semibold text-gray-300">Categoría</p>
+            <p class="text-xl text-white">{{ $project->category }}</p>
+        </div>
 
+        <!-- Estado del Proyecto -->
+        <div class="bg-gray-700 p-4 rounded-lg shadow-sm">
+            <p class="font-semibold text-gray-300">Estado</p>
+            <p class="text-xl text-blue-400">{{ $project->status }}</p>
+        </div>
+    </div>
 
-    <div class="mt-6">
-        <a href="{{ route('projects.all') }}" class="text-blue-500 hover:underline">Volver a la lista de proyectos</a>
+    <!-- Botón de Acción -->
+    <div class="flex justify-between items-center mt-8">
+        <a href="{{ route('projects.all') }}" class="text-blue-400 hover:text-blue-600 font-semibold py-2 px-6 border border-blue-400 rounded-lg hover:bg-blue-50 transition-all duration-300">
+            Volver a la lista de proyectos
+        </a>
+
+        <button class="bg-teal-600 text-white hover:bg-teal-700 font-semibold py-2 px-6 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-300">
+            Invertir en este Proyecto
+        </button>
     </div>
 </div>
+
