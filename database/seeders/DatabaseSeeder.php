@@ -14,14 +14,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        User::factory()->count(14)->withRandomRole()->create();
         $this->call([
 
             RoleSeeder::class,
-            UserSeeder::class
+            UserSeeder::class,
+            ProjectSeeder::class,
         ]);
         // User::factory(10)->create();
-        User::factory()->count(7)->withRandomRole()->create();
-        Project::factory(10)->create();
+
 
 
     }

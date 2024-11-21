@@ -1,41 +1,56 @@
-<div>
-    {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
-    <h1>Pushing Dashboard</h1>
+<div class="bg-gray-900 text-white min-h-screen p-6">
+    <!-- Título del Panel -->
+    <h1 class="text-4xl font-extrabold text-center mb-6">Pushing Dashboard</h1>
+
+    <!-- Mensaje de Sesión -->
     @if (session()->has('message'))
-    <div class="bg-green-500 text-white p-2 rounded mb-4">
+    <div class="bg-green-500 text-white p-4 rounded-lg mb-6 text-center">
         {{ session('message') }}
     </div>
-@endif
-    <a href="{{ route('project.create') }}" class="px-3 py-2 rounded-md bg-green-600">Crear Proyecto</a>
+    @endif
 
-    <table class="table-auto w-full">
-        <thead>
-            <tr>
-                <th class="px-4 py-2">Nombre</th>
-                <th class="px-4 py-2">Descripción</th>
-                <th class="px-4 py-2">Objetivo de Financiamiento</th>
-                <th class="px-4 py-2">Duración</th>
-                <th class="px-4 py-2">Categoría</th>
-                <th class="px-4 py-2">Estado</th>
-                <th class="px-4 py-2">Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($projects as $project)
+    <!-- Botón de Crear Proyecto -->
+    <div class="mb-6 text-center">
+        <a href="{{ route('project.create') }}" class="bg-teal-600 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-teal-700 transition-all duration-300">
+            Crear Proyecto
+        </a>
+    </div>
+
+    <!-- Tabla de Proyectos -->
+    <div class="overflow-x-auto bg-white shadow-lg rounded-lg">
+        <table class="w-full table-auto text-center text-gray-700">
+            <thead class="bg-teal-500 text-white">
                 <tr>
-                    <td class="border px-4 py-2">{{ $project->name }}</td>
-                    <td class="border px-4 py-2">{{ $project->description }}</td>
-                    <td class="border px-4 py-2">${{ number_format($project->funding_goal, 2) }}</td>
-                    <td class="border px-4 py-2">{{ $project->duration }} días</td>
-                    <td class="border px-4 py-2">{{ $project->category }}</td>
-                    <td class="border px-4 py-2">{{ $project->status }}</td>
-                    <td class="border px-4 py-2">
-                        <a href="{{ route('project.edit', $project->id) }}" class="text-blue-500 hover:underline">Editar</a> |
-                        <a href="{{ route('project.detail', $project->id) }}" class="text-green-500 hover:underline">Ver</a>
+                    <th class="px-6 py-3">Nombre</th>
+                    <th class="px-6 py-3">Descripción</th>
+                    <th class="px-6 py-3">Objetivo de Financiamiento</th>
+                    <th class="px-6 py-3">Duración</th>
+                    <th class="px-6 py-3">Categoría</th>
+                    <th class="px-6 py-3">Estado</th>
+                    <th class="px-6 py-3">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($projects as $project)
+                <tr class="hover:bg-gray-100">
+                    <td class="border px-6 py-3">{{ $project->name }}</td>
+                    <td class="border px-6 py-3">{{ $project->description }}</td>
+                    <td class="border px-6 py-3 text-teal-600">${{ number_format($project->funding_goal, 2) }}</td>
+                    <td class="border px-6 py-3">{{ $project->duration }} días</td>
+                    <td class="border px-6 py-3">{{ $project->category }}</td>
+                    <td class="border px-6 py-3">
+                        <span class="text-sm font-semibold text-{{ $project->status == 'Activo' ? 'green' : 'gray' }}-600">{{ $project->status }}</span>
+                    </td>
+                    <td class="border px-6 py-3">
+                        <div class="flex justify-center gap-3">
+                            <a href="{{ route('project.edit', $project->id) }}" class="text-blue-500 hover:underline">Editar</a>
+                            <a href="{{ route('project.detail', $project->id) }}" class="text-teal-500 hover:underline">Ver</a>
+                        </div>
                     </td>
                 </tr>
-            @endforeach
-        </tbody>
-    </table>
-
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 </div>
+

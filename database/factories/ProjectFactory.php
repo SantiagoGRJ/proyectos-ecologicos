@@ -22,8 +22,8 @@ class ProjectFactory extends Factory
             'description' => fake()->sentence(10),
             'funding_goal' => fake()->randomFloat(2),
             'duration' => fake()->numberBetween(120,200),
-            'category' => fake()->randomElement(["energia renovable","Reciclaje","agricultura sostenible"]),
-            'user_id' => fake()->unique()->numberBetween(1,10),
+            'category' => fake()->randomElement(["energia_renovable","reciclaje","agricultura_sostenible","energia_solar","reforestacion"]),
+            'user_id' => fake()->unique()->numberBetween(1,17),
             'status' => fake()->randomElement(['pendiente','aprobado','rechazado']),
         ];
     }
