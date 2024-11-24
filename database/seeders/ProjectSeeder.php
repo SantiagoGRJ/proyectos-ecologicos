@@ -53,6 +53,7 @@ class ProjectSeeder extends Seeder
                 'category' => 'agricultura_sostenible',
                 'user_id' => 4,
                 'status' => 'rechazado',
+                'path_img' => '4.jpg'
             ],
             [
                 'name' => 'Energía Renovable para Comunidades',
@@ -62,6 +63,7 @@ class ProjectSeeder extends Seeder
                 'category' => 'energia_renovable',
                 'user_id' => 5,
                 'status' => 'pendiente',
+                'path_img' => '5.jpg'
             ],
             [
                 'name' => 'Proyecto de Energía Eólica',
@@ -71,6 +73,7 @@ class ProjectSeeder extends Seeder
                 'category' => 'energia_renovable',
                 'user_id' => 6,
                 'status' => 'aprobado',
+                'path_img' => '6.png'
             ],
             [
                 'name' => 'Reciclaje de Plástico en Escuelas',
@@ -80,6 +83,7 @@ class ProjectSeeder extends Seeder
                 'category' => 'reciclaje',
                 'user_id' => 7,
                 'status' => 'rechazado',
+                'path_img' => '7.png'
             ],
             [
                 'name' => 'Energía Solar en Zonas Aisladas',
@@ -89,6 +93,7 @@ class ProjectSeeder extends Seeder
                 'category' => 'energia_solar',
                 'user_id' => 8,
                 'status' => 'aprobado',
+                'path_img' => '8.jpg'
             ],
             [
                 'name' => 'Reforestación en el Caribe',
@@ -98,6 +103,7 @@ class ProjectSeeder extends Seeder
                 'category' => 'reforestacion',
                 'user_id' => 9,
                 'status' => 'pendiente',
+                'path_img' => '9.png'
             ],
             [
                 'name' => 'Agricultura Sostenible en Zonas Urbanas',
@@ -107,6 +113,7 @@ class ProjectSeeder extends Seeder
                 'category' => 'agricultura_sostenible',
                 'user_id' => 10,
                 'status' => 'rechazado',
+                'path_img' => '10.png'
             ],
             [
                 'name' => 'Proyecto de Reciclaje Electrónico',
@@ -116,6 +123,7 @@ class ProjectSeeder extends Seeder
                 'category' => 'reciclaje',
                 'user_id' => 11,
                 'status' => 'pendiente',
+                'path_img' => '11.jpg'
             ],
             [
                 'name' => 'Plantas Solares para Empresas',
@@ -125,6 +133,7 @@ class ProjectSeeder extends Seeder
                 'category' => 'energia_solar',
                 'user_id' => 12,
                 'status' => 'aprobado',
+                'path_img' => '12.jpg'
             ],
             [
                 'name' => 'Educación sobre Energía Renovable',
@@ -134,6 +143,7 @@ class ProjectSeeder extends Seeder
                 'category' => 'energia_renovable',
                 'user_id' => 13,
                 'status' => 'pendiente',
+                'path_img' => '13.png'
             ],
             [
                 'name' => 'Energía Eólica para Ciudades',
@@ -143,6 +153,7 @@ class ProjectSeeder extends Seeder
                 'category' => 'energia_renovable',
                 'user_id' => 14,
                 'status' => 'rechazado',
+                'path_img' => '14.png'
             ],
             [
                 'name' => 'Reforestación en el Desierto',
@@ -152,6 +163,7 @@ class ProjectSeeder extends Seeder
                 'category' => 'reforestacion',
                 'user_id' => 15,
                 'status' => 'aprobado',
+                'path_img' => '15.jpg'
             ],
             [
                 'name' => 'Agricultura Sostenible en el Trópico',
@@ -161,6 +173,7 @@ class ProjectSeeder extends Seeder
                 'category' => 'agricultura_sostenible',
                 'user_id' => 16,
                 'status' => 'pendiente',
+                'path_img' => '16.jpg'
             ],
             [
                 'name' => 'Proyecto de Reciclaje de Papel',
@@ -170,6 +183,7 @@ class ProjectSeeder extends Seeder
                 'category' => 'reciclaje',
                 'user_id' => 17,
                 'status' => 'rechazado',
+                'path_img' => '17.jpg'
             ],
         ];
 
