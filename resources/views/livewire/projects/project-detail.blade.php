@@ -1,4 +1,4 @@
-<div class="max-w-4xl mx-auto p-6 bg-gray-800 shadow-lg rounded-lg">
+<div class="max-w-4xl mx-auto mt-16 p-6 bg-gray-800 shadow-lg rounded-lg">
     <!-- Título del Proyecto -->
     <h2 class="text-4xl font-extrabold text-white mb-4">{{ $project->name }}</h2>
 

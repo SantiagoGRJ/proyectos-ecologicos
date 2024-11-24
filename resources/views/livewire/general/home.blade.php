@@ -26,7 +26,7 @@
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>
                     <p class="text-sm text-gray-300 mb-4">{{ $project->description }}</p>
-                    <a href="/projects/{{ $project->id }}"
+                    <a href="{{ route('project.detail',$project->id) }}"
                         class="text-green-400 hover:text-green-500 font-medium inline-block">
                         Ver más →
                     </a>
@@ -47,7 +47,7 @@
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>
                     <p class="text-sm text-gray-300 mb-4">{{ $project->description }}</p>
-                    <a href="/projects/{{ $project->id }}"
+                    <a href="{{ route('project.detail',$project->id) }}"
                         class="text-green-400 hover:text-green-500 font-medium inline-block">
                         Ver más →
                     </a>
@@ -69,7 +69,7 @@
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>
                     <p class="text-sm text-gray-300 mb-4">{{ $project->description }}</p>
-                    <a href="/projects/{{ $project->id }}"
+                    <a href="{{ route('project.detail',$project->id) }}"
                         class="text-green-400 hover:text-green-500 font-medium inline-block">
                         Ver más →
                     </a>
@@ -91,7 +91,7 @@
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>
                     <p class="text-sm text-gray-300 mb-4">{{ $project->description }}</p>
-                    <a href="/projects/{{ $project->id }}"
+                    <a href="{{ route('project.detail',$project->id) }}"
                         class="text-green-400 hover:text-green-500 font-medium inline-block">
                         Ver más →
                     </a>
@@ -113,7 +113,7 @@
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>
                     <p class="text-sm text-gray-300 mb-4">{{ $project->description }}</p>
-                    <a href="/projects/{{ $project->id }}"
+                    <a href="{{ route('project.detail',$project->id) }}"
                         class="text-green-400 hover:text-green-500 font-medium inline-block">
                         Ver más →
                     </a>
@@ -135,7 +135,7 @@
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>
                     <p class="text-sm text-gray-300 mb-4">{{ $project->description }}</p>
-                    <a href="/projects/{{ $project->id }}"
+                    <a href="{{ route('project.detail',$project->id) }}"
                         class="text-green-400 hover:text-green-500 font-medium inline-block">
                         Ver más →
                     </a>

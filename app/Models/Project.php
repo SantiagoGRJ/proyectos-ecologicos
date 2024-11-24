@@ -16,7 +16,7 @@ class Project extends Model
         'funding_goal',
         'duration',
         'category',
-        'image_path',
+        'path_img',
         'video_url',
         'status', // Ej. para estado de aprobación: pendiente, aprobado, rechazado
         'user_id', // Para relacionarlo con el emprendedor que creó el proyecto

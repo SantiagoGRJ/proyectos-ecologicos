@@ -60,6 +60,22 @@
             </div>
         </div>
 
+        <!-- Imagen -->
+        <div class="mb-6">
+            <label for="path_img" class="block text-sm font-medium text-gray-200">Imagen del Proyecto</label>
+            <div class="relative mt-2">
+                <input type="file"  wire:model="path_img" class="block w-full px-4 py-3 rounded-lg bg-gray-800 text-white border-2 border-transparent focus:ring-2 focus:ring-teal-500 focus:border-teal-500">
+                @error('path_img') <span class="text-red-400 text-sm absolute top-full left-0">{{ $message }}</span> @enderror
+            </div>
+
+            <!-- Mostrar vista previa de la imagen -->
+            @if ($path_img_preview)
+                <div class="mt-4">
+                    <img src="{{ $path_img_preview }}" alt="Vista previa de la imagen" class="max-w-full h-auto rounded-lg shadow-lg">
+                </div>
+            @endif
+        </div>
+
         <!-- Botón de Enviar -->
         <div class="text-center">
             <button type="submit" class="bg-teal-600 text-white px-8 py-4 rounded-lg shadow-lg transform hover:bg-teal-700 hover:scale-105 transition-all duration-300">
