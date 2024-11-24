@@ -32,7 +32,7 @@ class ProjectSeeder extends Seeder
                 'duration' => 150,
                 'category' => 'reciclaje',
                 'user_id' => 2,
-                'status' => 'pendiente',
+                'status' => 'aprobado',
                 'path_img' => '2.jpg'
             ],
             [
@@ -52,7 +52,7 @@ class ProjectSeeder extends Seeder
                 'duration' => 200,
                 'category' => 'agricultura_sostenible',
                 'user_id' => 4,
-                'status' => 'rechazado',
+                'status' => 'aprobado',
                 'path_img' => '4.jpg'
             ],
             [
@@ -62,7 +62,7 @@ class ProjectSeeder extends Seeder
                 'duration' => 180,
                 'category' => 'energia_renovable',
                 'user_id' => 5,
-                'status' => 'pendiente',
+                'status' => 'aprobado',
                 'path_img' => '5.jpg'
             ],
             [
@@ -82,7 +82,7 @@ class ProjectSeeder extends Seeder
                 'duration' => 150,
                 'category' => 'reciclaje',
                 'user_id' => 7,
-                'status' => 'rechazado',
+                'status' => 'aprobado',
                 'path_img' => '7.png'
             ],
             [
@@ -102,7 +102,7 @@ class ProjectSeeder extends Seeder
                 'duration' => 240,
                 'category' => 'reforestacion',
                 'user_id' => 9,
-                'status' => 'pendiente',
+                'status' => 'aprobado',
                 'path_img' => '9.png'
             ],
             [
@@ -112,7 +112,7 @@ class ProjectSeeder extends Seeder
                 'duration' => 160,
                 'category' => 'agricultura_sostenible',
                 'user_id' => 10,
-                'status' => 'rechazado',
+                'status' => 'aprobado',
                 'path_img' => '10.png'
             ],
             [
@@ -172,7 +172,7 @@ class ProjectSeeder extends Seeder
                 'duration' => 220,
                 'category' => 'agricultura_sostenible',
                 'user_id' => 16,
-                'status' => 'pendiente',
+                'status' => 'aprobado',
                 'path_img' => '16.jpg'
             ],
             [
@@ -182,7 +182,7 @@ class ProjectSeeder extends Seeder
                 'duration' => 150,
                 'category' => 'reciclaje',
                 'user_id' => 17,
-                'status' => 'rechazado',
+                'status' => 'aprobado',
                 'path_img' => '17.jpg'
             ],
         ];
