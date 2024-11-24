@@ -4,7 +4,7 @@
 
     <!-- Imagen del Proyecto (si se tiene) -->
     <div class="mb-6">
-        <img src="{{ $project->image_url }}" alt="Proyecto Imagen" class="w-full h-72 object-cover rounded-lg shadow-md">
+        <img src="{{ Storage::url('projects/'.$project->path_img) }}" alt="Proyecto Imagen" class="w-full h-72 object-cover rounded-lg shadow-md">
     </div>
 
     <!-- Descripción del Proyecto -->

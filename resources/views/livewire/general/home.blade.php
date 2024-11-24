@@ -21,7 +21,7 @@
             @foreach ($projects as $project)
             <div
                 class="card bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img src="project-image.jpg" alt="Proyecto"
+                <img src="{{ Storage::url('projects/'.$project->path_img) }}" alt="Proyecto"
                     class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300">
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>
@@ -42,7 +42,7 @@
             @foreach ($projects_energy as $project)
             <div
                 class="card bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img src="project-image.jpg" alt="Proyecto"
+                <img src="{{ Storage::url('projects/'.$project->path_img) }}" alt="Proyecto"
                     class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300">
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>
@@ -64,7 +64,7 @@
             @foreach ($projects_recycle as $project)
             <div
                 class="card bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img src="project-image.jpg" alt="Proyecto"
+                <img src="{{ Storage::url('projects/'.$project->path_img) }}" alt="Proyecto"
                     class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300">
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>
@@ -86,7 +86,7 @@
             @foreach ($projects_agriculture as $project)
             <div
                 class="card bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img src="project-image.jpg" alt="Proyecto"
+                <img src="{{ Storage::url('projects/'.$project->path_img) }}" alt="Proyecto"
                     class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300">
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>
@@ -108,7 +108,7 @@
             @foreach ($projects_sun as $project)
             <div
                 class="card bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img src="project-image.jpg" alt="Proyecto"
+                <img src="{{ Storage::url('projects/'.$project->path_img) }}" alt="Proyecto"
                     class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300">
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>
@@ -130,7 +130,7 @@
             @foreach ($projects_refores as $project)
             <div
                 class="card bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img src="project-image.jpg" alt="Proyecto"
+                <img src="{{ Storage::url('projects/'.$project->path_img) }}" alt="Proyecto"
                     class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300">
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>

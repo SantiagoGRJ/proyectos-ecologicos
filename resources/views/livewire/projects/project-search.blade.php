@@ -13,7 +13,7 @@
         {{-- Iteración sobre los proyectos --}}
         @foreach ($projects as $project)
         <div class="bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-            <img src="project-image.jpg" alt="Proyecto" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="{{ Storage::url('projects/'.$project->path_img) }}" alt="Proyecto" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
             <div class="p-6">
                 <h3 class="text-2xl font-semibold text-green-400 mb-3">{{ $project->name }}</h3>
                 <p class="text-gray-300 mb-4">{{ Str::limit($project->description, 120) }}</p>
