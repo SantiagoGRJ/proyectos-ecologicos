@@ -18,6 +18,7 @@ return new class extends Migration
             $table->decimal('funding_goal', 15, 2); // Objetivo de financiamiento
             $table->integer('duration'); // Duración estimada del proyecto (en días)
             $table->string('category'); // Categoría (ej. energía renovable, reciclaje)
+            $table->string('path_img');
             $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade'); // ID del emprendedor que creó el proyecto
             $table->enum('status',['pendiente','aprobado','rechazado'])->default('pendiente');
             $table->timestamps();

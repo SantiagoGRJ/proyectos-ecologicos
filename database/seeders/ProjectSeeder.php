@@ -23,6 +23,7 @@ class ProjectSeeder extends Seeder
                 'category' => 'energia_solar',
                 'user_id' => 1,
                 'status' => 'aprobado',
+                'path_img' => '1.png'
             ],
             [
                 'name' => 'Reciclaje en la Ciudad',
@@ -32,6 +33,7 @@ class ProjectSeeder extends Seeder
                 'category' => 'reciclaje',
                 'user_id' => 2,
                 'status' => 'pendiente',
+                'path_img' => '2.jpg'
             ],
             [
                 'name' => 'Reforestación en Amazonas',
@@ -41,6 +43,7 @@ class ProjectSeeder extends Seeder
                 'category' => 'reforestacion',
                 'user_id' => 3,
                 'status' => 'aprobado',
+                'path_img' => '3.jpeg'
             ],
             [
                 'name' => 'Agricultura Sostenible para el Futuro',
