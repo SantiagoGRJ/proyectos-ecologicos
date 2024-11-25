@@ -4,7 +4,8 @@
 
     <!-- Imagen del Proyecto (si se tiene) -->
     <div class="mb-6">
-        <img src="{{ Storage::url('projects/'.$project->path_img) }}" alt="Proyecto Imagen" class="w-full h-72 object-cover rounded-lg shadow-md">
+        <img src="{{ Storage::url('projects/' . $project->path_img) }}" alt="Proyecto Imagen"
+            class="w-full h-72 object-cover rounded-lg shadow-md">
     </div>
 
     <!-- Descripción del Proyecto -->
@@ -42,13 +43,24 @@
 
     <!-- Botón de Acción -->
     <div class="flex justify-between items-center mt-8">
-        <a href="{{ route('projects.all') }}" class="text-blue-400 hover:text-blue-600 font-semibold py-2 px-6 border border-blue-400 rounded-lg hover:bg-blue-50 transition-all duration-300">
-            Volver a la lista de proyectos
-        </a>
+        @if (Auth::check())
+            <a href="{{ route('projects.all') }}"
+                class="text-blue-400 hover:text-blue-600 font-semibold py-2 px-6 border border-blue-400 rounded-lg hover:bg-blue-50 transition-all duration-300">
+                Volver a la lista de proyectos
+            </a>
+        @else
+        <a href="{{ route('home.all') }}"
+                class="text-blue-400 hover:text-blue-600 font-semibold py-2 px-6 border border-blue-400 rounded-lg hover:bg-blue-50 transition-all duration-300">
+                Volver a la lista de proyectos
+            </a>
+        @endif
 
-        <button class="bg-teal-600 text-white hover:bg-teal-700 font-semibold py-2 px-6 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-300">
+
+
+
+        <button
+            class="bg-teal-600 text-white hover:bg-teal-700 font-semibold py-2 px-6 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-300">
             Invertir en este Proyecto
         </button>
     </div>
 </div>
-
