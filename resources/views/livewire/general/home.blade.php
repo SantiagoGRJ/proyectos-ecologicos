@@ -8,7 +8,7 @@
     class="bg-cover bg-center h-96 flex justify-center flex-col items-center text-center text-white relative"
     style="background-image: url({{ Storage::url('assets/'.'Proyectose.jpg') }});">
     <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Capa de opacidad -->
-    <h1 class="text-4xl  font-bold relative">Bienvenidos a Eco</h1>
+    <h1 class="text-4xl  font-bold relative">Bienvenidos a <span class="text-4xl font-bold  text-green-400 " >EcoEmprende</span></h1>
     <p class="mt-4 text-xl relative">Apoya proyectos ecológicos y haz crecer el futuro sostenible</p>
 </section>
 
@@ -21,12 +21,12 @@
             @foreach ($projects as $project)
             <div
                 class="card bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img src="project-image.jpg" alt="Proyecto"
+                <img src="{{ Storage::url('projects/'.$project->path_img) }}" alt="Proyecto"
                     class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300">
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>
                     <p class="text-sm text-gray-300 mb-4">{{ $project->description }}</p>
-                    <a href="/projects/{{ $project->id }}"
+                    <a href="{{ route('project.detail',$project->id) }}"
                         class="text-green-400 hover:text-green-500 font-medium inline-block">
                         Ver más →
                     </a>
@@ -42,12 +42,12 @@
             @foreach ($projects_energy as $project)
             <div
                 class="card bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img src="project-image.jpg" alt="Proyecto"
+                <img src="{{ Storage::url('projects/'.$project->path_img) }}" alt="Proyecto"
                     class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300">
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>
                     <p class="text-sm text-gray-300 mb-4">{{ $project->description }}</p>
-                    <a href="/projects/{{ $project->id }}"
+                    <a href="{{ route('project.detail',$project->id) }}"
                         class="text-green-400 hover:text-green-500 font-medium inline-block">
                         Ver más →
                     </a>
@@ -64,12 +64,12 @@
             @foreach ($projects_recycle as $project)
             <div
                 class="card bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img src="project-image.jpg" alt="Proyecto"
+                <img src="{{ Storage::url('projects/'.$project->path_img) }}" alt="Proyecto"
                     class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300">
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>
                     <p class="text-sm text-gray-300 mb-4">{{ $project->description }}</p>
-                    <a href="/projects/{{ $project->id }}"
+                    <a href="{{ route('project.detail',$project->id) }}"
                         class="text-green-400 hover:text-green-500 font-medium inline-block">
                         Ver más →
                     </a>
@@ -86,12 +86,12 @@
             @foreach ($projects_agriculture as $project)
             <div
                 class="card bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img src="project-image.jpg" alt="Proyecto"
+                <img src="{{ Storage::url('projects/'.$project->path_img) }}" alt="Proyecto"
                     class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300">
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>
                     <p class="text-sm text-gray-300 mb-4">{{ $project->description }}</p>
-                    <a href="/projects/{{ $project->id }}"
+                    <a href="{{ route('project.detail',$project->id) }}"
                         class="text-green-400 hover:text-green-500 font-medium inline-block">
                         Ver más →
                     </a>
@@ -108,12 +108,12 @@
             @foreach ($projects_sun as $project)
             <div
                 class="card bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img src="project-image.jpg" alt="Proyecto"
+                <img src="{{ Storage::url('projects/'.$project->path_img) }}" alt="Proyecto"
                     class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300">
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>
                     <p class="text-sm text-gray-300 mb-4">{{ $project->description }}</p>
-                    <a href="/projects/{{ $project->id }}"
+                    <a href="{{ route('project.detail',$project->id) }}"
                         class="text-green-400 hover:text-green-500 font-medium inline-block">
                         Ver más →
                     </a>
@@ -130,12 +130,12 @@
             @foreach ($projects_refores as $project)
             <div
                 class="card bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img src="project-image.jpg" alt="Proyecto"
+                <img src="{{ Storage::url('projects/'.$project->path_img) }}" alt="Proyecto"
                     class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300">
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-green-400 mb-2">{{ $project->name }}</h3>
                     <p class="text-sm text-gray-300 mb-4">{{ $project->description }}</p>
-                    <a href="/projects/{{ $project->id }}"
+                    <a href="{{ route('project.detail',$project->id) }}"
                         class="text-green-400 hover:text-green-500 font-medium inline-block">
                         Ver más →
                     </a>

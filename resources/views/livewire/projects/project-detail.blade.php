@@ -1,10 +1,11 @@
-<div class="max-w-4xl mx-auto p-6 bg-gray-800 shadow-lg rounded-lg">
+<div class="max-w-4xl mx-auto mt-16 p-6 bg-gray-800 shadow-lg rounded-lg">
     <!-- Título del Proyecto -->
     <h2 class="text-4xl font-extrabold text-white mb-4">{{ $project->name }}</h2>
 
     <!-- Imagen del Proyecto (si se tiene) -->
     <div class="mb-6">
-        <img src="{{ $project->image_url }}" alt="Proyecto Imagen" class="w-full h-72 object-cover rounded-lg shadow-md">
+        <img src="{{ Storage::url('projects/' . $project->path_img) }}" alt="Proyecto Imagen"
+            class="w-full h-72 object-cover rounded-lg shadow-md">
     </div>
 
     <!-- Descripción del Proyecto -->
@@ -40,15 +41,35 @@
         </div>
     </div>
 
+    @php
+        if(Auth::check()){
+            if(Auth::user()->hasRole('admin')){
+                $redirect=route('dashboard.admin');
+
+            }else if (Auth::user()->hasRole('investor')){
+                $redirect=route('dashboard.investor');
+
+            }else{
+                $redirect=route('dashboard.pushing');
+            }
+        }else{
+            $redirect=route('home.all');
+        }
+    @endphp
+
+
     <!-- Botón de Acción -->
-    <div class="flex justify-between items-center mt-8">
-        <a href="{{ route('projects.all') }}" class="text-blue-400 hover:text-blue-600 font-semibold py-2 px-6 border border-blue-400 rounded-lg hover:bg-blue-50 transition-all duration-300">
+    <div class="flex justify-between gap-1 items-center mt-8">
+
+        <a href="{{ $redirect }}"
+            class="text-blue-400 hover:text-blue-600 font-semibold py-2 px-6 border border-blue-400 rounded-lg hover:bg-blue-50 transition-all duration-300">
             Volver a la lista de proyectos
         </a>
 
-        <button class="bg-teal-600 text-white hover:bg-teal-700 font-semibold py-2 px-6 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-300">
+        <button
+        disabled
+            class="bg-teal-600 text-white hover:bg-teal-700 font-semibold py-2 px-6 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-300">
             Invertir en este Proyecto
         </button>
     </div>
 </div>
-

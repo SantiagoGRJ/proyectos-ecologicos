@@ -23,16 +23,27 @@ new class extends Component
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}" wire:navigate>
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                    @php
+                        if(Auth::user()->hasRole('admin')){
+                            $redirectRoute= route('dashboard.admin');
+                        }else if(Auth::user()->hasRole('investor')){
+                            $redirectRoute= route('dashboard.investor');
+                        }else{
+                            $redirectRoute=route('dashboard.pushing');
+                        }
+                    @endphp
+                    <a href="{{ $redirectRoute }}" wire:navigate>
+                        <img src="{{ Storage::url('projects/'.'logo-reducido.png') }}" class="block h-9 w-auto fill-current text-gray-800" alt="">
+                       {{--  <x-application-logo class="block h-9 w-auto fill-current text-gray-800" /> --}}
                     </a>
+
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
+                    {{-- <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
                         {{ __('Dashboard') }}
-                    </x-nav-link>
+                    </x-nav-link> --}}
                 </div>
             </div>
 
@@ -52,9 +63,9 @@ new class extends Component
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('profile')" wire:navigate>
+                        {{-- <x-dropdown-link :href="route('profile')" wire:navigate>
                             {{ __('Profile') }}
-                        </x-dropdown-link>
+                        </x-dropdown-link> --}}
 
                         <!-- Authentication -->
                         <button wire:click="logout" class="w-full text-start">
@@ -94,10 +105,10 @@ new class extends Component
             </div>
 
             <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('profile')" wire:navigate>
+               {{--  <x-responsive-nav-link :href="route('profile')" wire:navigate>
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
-
+ --}}
                 <!-- Authentication -->
                 <button wire:click="logout" class="w-full text-start">
                     <x-responsive-nav-link>

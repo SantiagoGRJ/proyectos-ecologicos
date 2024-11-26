@@ -1,6 +1,6 @@
 <div class="bg-gray-900 text-white min-h-screen p-6">
     <!-- Título del Panel -->
-    <h1 class="text-4xl font-extrabold text-center mb-6">Pushing Dashboard</h1>
+    <h1 class="text-4xl font-extrabold text-center mb-6">Panel de Emprendedor</h1>
 
     <!-- Mensaje de Sesión -->
     @if (session()->has('message'))
