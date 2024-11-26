@@ -1,4 +1,4 @@
-<footer class="bg-primary bg-opacity-10 py-16 md:py-20 lg:py-24 w-full">
+<footer class="bg-primary  bg-opacity-10 py-16 md:py-20 lg:py-24 w-full">
     <div class="container mx-auto flex flex-col items-center">
         <div class="flex flex-col md:flex-row justify-between items-center w-full space-y-8 md:space-y-0 md:space-x-16">
             <!-- Logo y Descripción -->
@@ -7,7 +7,7 @@
                 <p class="text-green-400 mb-6 text-base font-medium">Transformamos ideas en proyectos con impacto
                     ecológico. Únete al cambio.</p>
                 <div class="flex space-x-6">
-                    
+
                     <!-- Repite para otros íconos -->
                 </div>
             </div>

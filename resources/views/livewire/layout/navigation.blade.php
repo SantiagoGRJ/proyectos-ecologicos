@@ -23,10 +23,20 @@ new class extends Component
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}" wire:navigate>
+                    @php
+                        if(Auth::user()->hasRole('admin')){
+                            $redirectRoute= route('dashboard.admin');
+                        }else if(Auth::user()->hasRole('investor')){
+                            $redirectRoute= route('dashboard.investor');
+                        }else{
+                            $redirectRoute=route('dashboard.pushing');
+                        }
+                    @endphp
+                    <a href="{{ $redirectRoute }}" wire:navigate>
                         <img src="{{ Storage::url('projects/'.'logo-reducido.png') }}" class="block h-9 w-auto fill-current text-gray-800" alt="">
                        {{--  <x-application-logo class="block h-9 w-auto fill-current text-gray-800" /> --}}
                     </a>
+
                 </div>
 
                 <!-- Navigation Links -->

@@ -41,24 +41,33 @@
         </div>
     </div>
 
+    @php
+        if(Auth::check()){
+            if(Auth::user()->hasRole('admin')){
+                $redirect=route('dashboard.admin');
+
+            }else if (Auth::user()->hasRole('investor')){
+                $redirect=route('dashboard.investor');
+
+            }else{
+                $redirect=route('dashboard.pushing');
+            }
+        }else{
+            $redirect=route('home.all');
+        }
+    @endphp
+
+
     <!-- Botón de Acción -->
-    <div class="flex justify-between items-center mt-8">
-        @if (Auth::check())
-            <a href="{{ route('projects.all') }}"
-                class="text-blue-400 hover:text-blue-600 font-semibold py-2 px-6 border border-blue-400 rounded-lg hover:bg-blue-50 transition-all duration-300">
-                Volver a la lista de proyectos
-            </a>
-        @else
-        <a href="{{ route('home.all') }}"
-                class="text-blue-400 hover:text-blue-600 font-semibold py-2 px-6 border border-blue-400 rounded-lg hover:bg-blue-50 transition-all duration-300">
-                Volver a la lista de proyectos
-            </a>
-        @endif
+    <div class="flex justify-between gap-1 items-center mt-8">
 
-
-
+        <a href="{{ $redirect }}"
+            class="text-blue-400 hover:text-blue-600 font-semibold py-2 px-6 border border-blue-400 rounded-lg hover:bg-blue-50 transition-all duration-300">
+            Volver a la lista de proyectos
+        </a>
 
         <button
+        disabled
             class="bg-teal-600 text-white hover:bg-teal-700 font-semibold py-2 px-6 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-300">
             Invertir en este Proyecto
         </button>
