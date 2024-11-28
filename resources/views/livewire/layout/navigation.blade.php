@@ -35,7 +35,9 @@ new class extends Component
                     <a href="{{ $redirectRoute }}" wire:navigate>
                         <img src="{{ Storage::url('projects/'.'logo-reducido.png') }}" class="block h-9 w-auto fill-current text-gray-800" alt="">
                        {{--  <x-application-logo class="block h-9 w-auto fill-current text-gray-800" /> --}}
+
                     </a>
+                    <span class="self-center text-2xl font-bold whitespace-nowrap text-green-600 dark:text-green-400">EcoEmprende</span>
 
                 </div>
 
