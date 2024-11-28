@@ -47,7 +47,7 @@ class ProjectForm extends Component
         $this->funding_goal = $project->funding_goal;
         $this->duration = $project->duration;
         $this->category = $project->category;
-        $this->path_img_preview = $project->path_img ? asset('storage/' . $project->path_img) : null;
+        $this->path_img_preview = $project->path_img ? Storage::url('projects/'.$project->path_img) : null;
     } else {
         $this->path_img_preview = null;
     }
