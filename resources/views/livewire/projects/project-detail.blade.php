@@ -42,19 +42,23 @@
     </div>
 
     @php
-        if(Auth::check()){
-            if(Auth::user()->hasRole('admin')){
-                $redirect=route('dashboard.admin');
+    if(Auth::check()){
+    if(Auth::user()->hasRole('admin')){
+    $bandera='admin';
+    $redirect=route('dashboard.admin');
 
-            }else if (Auth::user()->hasRole('investor')){
-                $redirect=route('dashboard.investor');
+    }else if (Auth::user()->hasRole('investor')){
+    $bandera='investor';
+    $redirect=route('dashboard.investor');
 
-            }else{
-                $redirect=route('dashboard.pushing');
-            }
-        }else{
-            $redirect=route('home.all');
-        }
+    }else{
+    $bandera='pushing';
+    $redirect=route('dashboard.pushing');
+    }
+    }else{
+    $bandera='no';
+    $redirect=route('home.all');
+    }
     @endphp
 
 
@@ -66,10 +70,30 @@
             Volver a la lista de proyectos
         </a>
 
-        <button
-        disabled
+        @switch($bandera)
+        @case('investor')
+        <button disabled
             class="bg-teal-600 text-white hover:bg-teal-700 font-semibold py-2 px-6 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-300">
             Invertir en este Proyecto
         </button>
+        @break
+        @case('admin')
+        <button wire:click='aprobar({{ $project->id }})'
+            class="bg-green-600 text-white rounded-md px-4 py-2 hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors duration-300"
+            wire:confirm="¿Estás seguro de que quieres aprobar este proyecto?">
+        Aprobar
+    </button>
+    <button wire:click='rechazar({{ $project->id }})'
+            class="bg-red-600 text-white rounded-md px-4 py-2 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors duration-300"
+            wire:confirm="¿Estás seguro de que no quieres aprobar este proyecto?">
+        No Aprobar
+    </button>
+        @break
+
+        @default
+
+        @endswitch
+
+
     </div>
 </div>
